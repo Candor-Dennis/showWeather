@@ -1,0 +1,8 @@
+body{
+	height: 70vh;
+	width: auto;
+	background: url(../../imgs/weather.jpg) center fixed;
+}
+.txt-1{
+	margin-top: 70px;
+}
