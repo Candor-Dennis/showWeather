@@ -16,15 +16,19 @@
 		</div>
 		<div class="row text-center">
 			<div class="form col-sm-12 col-md-8 mt-5 offset-md-2 offset-sm-3">
-				<div class="form-inline mx-auto">
-					<input type="text" id="city" placeholder="Enter City Name" class="form-control w-75">
-					<button class="btn btn-primary ml-sm-2" onclick="checkWeather()">Check Weather</button>
+				<div class=" mx-auto">
+					<input type="text" id="city" placeholder="Enter City Name" class="form-control ">
+					<button class="btn btn-primary mt-3 btn-block btn-sm-inline" onclick="checkWeather()">Check Weather</button>
+				</div>
+				<div id="errorDiv" class="mt-5">
+			
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="weatherContent" class="mt-5">
+	<div id="weatherContent" class="mt-5 d-none">
+		
 		<div class="card bg-light mb-3 mx-auto" style="max-width: 30rem;" >
 			  <div class="card-header">
 			  	<div id="weatherIcon"></div>

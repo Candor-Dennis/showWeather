@@ -12,9 +12,10 @@ function checkWeather() {
             xmlhttp.send();
             xmlhttp.onreadystatechange = (event) => {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById('errorDiv').classList.add("d-none");
+                    document.getElementById('weatherContent').classList.remove("d-none");
 
                     const resp  = xmlhttp.responseText;
-                    console.log(resp)
                     jsonResponse = JSON.parse(resp);
                     
                     weatherImg = `<img src="https://openweathermap.org/img/w/${jsonResponse.weather[0].icon}.png">`
@@ -30,8 +31,11 @@ function checkWeather() {
                     document.getElementById('description').innerHTML = description;
                     
                 }else if(xmlhttp.status == 404){
-                    alert("error");
-                    return
+                    document.getElementById('weatherContent').classList.add("d-none");
+                    document.getElementById('errorDiv').classList.remove("d-none");
+
+                    document.getElementById('errorDiv').innerHTML = '<div class="alert alert-danger">City Not Found</div>';
+                    
                 }
         }
     }
