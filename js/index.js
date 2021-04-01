@@ -28,7 +28,7 @@ function checkWeather() {
                     document.getElementById('temperature').innerHTML = temperature;
                     document.getElementById('humidity').innerHTML = humidity;
                     document.getElementById('pressure').innerHTML = pressure;
-                    document.getElementById('description').innerHTML = "Weather forcast for your city is" + " " +  description;
+                    document.getElementById('description').innerHTML = "Weather forcast for " + " " + city + " " + "is " + " " +  description;
                     
                 }else if(xmlhttp.status == 404){
                     document.getElementById('weatherContent').classList.add("d-none");
